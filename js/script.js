@@ -25,8 +25,17 @@ addBtn.addEventListener("click", () => {
   let btn = document.createElement("button");
   btn.innerHTML = "Remove";
   btn.setAttribute("id", "remove-btn");
+
+  btn.addEventListener('click', () => {
+    div.style.display = 'none';
+  } )
+
   div.appendChild(btn);
   paraTitle.textContent = titleInput.value;
   paraAuthor.textContent = authorInput.value;
   container.appendChild(div);
+
+  
 });
+
+
