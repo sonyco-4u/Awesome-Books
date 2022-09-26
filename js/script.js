@@ -1,19 +1,32 @@
+const titleInput = document.querySelector(".title-input");
+const authorInput = document.querySelector(".author-input");
+const addBtn = document.querySelector(".add-btn");
 
-const titleInput = document.querySelector('.title-input');
-const authorInput = document.querySelector('.author-input');
+const titlePop = document.querySelector(".title");
+const authorPop = document.querySelector(".author");
+const container = document.getElementById("container");
 
-const titleValue = titleInput.value;
-const authorValue = authorInput.value;
+// addBtn.addEventListener("click", function () {
+//   titlePop.innerHTML = titleInput.value;
+//   authorPop.innerHTML = authorInput.value;
+// });
+// console.log(titleValue);
 
+addBtn.addEventListener("click", () => {
+  // DECLARING VARIABLE
+  let div = document.createElement("div");
+  let paraTitle = document.createElement("p");
+  let paraAuthor = document.createElement("p");
+  let hori = document.createElement("hr");
 
-const addBtn = document.querySelector('.add-btn');
-
-
-const titlePop = document.querySelector('.title');
-const authorPop = document.querySelector('.author');
-
-addBtn.addEventListener('click', function() {
-
-  titlePop.innerHTML = titleValue;
-  authorPop.innerHTML = authorValue;
+  div.appendChild(hori);
+  div.appendChild(paraTitle);
+  div.appendChild(paraAuthor);
+  let btn = document.createElement("button");
+  btn.innerHTML = "Remove";
+  btn.setAttribute("id", "remove-btn");
+  div.appendChild(btn);
+  paraTitle.textContent = titleInput.value;
+  paraAuthor.textContent = authorInput.value;
+  container.appendChild(div);
 });
