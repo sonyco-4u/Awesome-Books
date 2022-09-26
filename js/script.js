@@ -26,16 +26,22 @@ addBtn.addEventListener("click", () => {
   btn.innerHTML = "Remove";
   btn.setAttribute("id", "remove-btn");
 
-  btn.addEventListener('click', () => {
-    div.style.display = 'none';
-  } )
+  btn.addEventListener("click", () => {
+    div.style.display = "none";
+  });
 
   div.appendChild(btn);
   paraTitle.textContent = titleInput.value;
   paraAuthor.textContent = authorInput.value;
   container.appendChild(div);
 
-  
+  // ADDING CONSTRUCTOR AND LOCAL STORAGE
+  function MyObjects(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+  const bookObj = new MyObjects(paraTitle.textContent, paraAuthor.textContent);
+  localStorage.setItem("Title", paraTitle.textContent);
+  localStorage.setItem("Author", paraAuthor.textContent);
+  // end
 });
-
-
