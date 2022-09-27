@@ -57,4 +57,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT/sonyco-4u/Awesome-Books](./LICENSE) licensed.
+This project is [MIT/sonyco-4u/Awesome-Books](./LICENSE) licensed..
